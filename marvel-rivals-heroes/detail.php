@@ -29,7 +29,7 @@ $url = "https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock";
 
             Nous utiliserons l'API sur mon site afin d'obtenir la bio de chaque héro:
 
-            - https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/heroes/capitain-america
+            - https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock
 
             Vous pouvez récupérer les autres données à partir du fichier heroes.json, comme pour la page index.php
         -->
