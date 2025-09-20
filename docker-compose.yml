@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+  webserver:
+    build:
+      context: .
+      dockerfile: "./docker/services/php81/Dockerfile"
+    container_name: "tp2_marvel-rivals"
+    ports:
+      - "8080:80"
+      - "8443:443"
+    volumes:
+      - ./:/var/www/html:cached
+      - ./docker/vhosts:/etc/apache2/sites-enabled
+      - ./docker/services/php81/custom.ini:/usr/local/etc/php/conf.d/custom.ini

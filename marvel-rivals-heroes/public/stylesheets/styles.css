@@ -1,0 +1,239 @@
+/**
+    Style CSS très rapide pour vous donner les fonts, les images et un début de page. 
+    NOTE: Le CSS n'est pas très bien fait.
+ */
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/Nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Refrigirator';
+    src: url('../fonts/RefrigiratorDeluxe/Refrigerator Deluxe.otf') format('opentype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Refrigirator';
+    src: url('../fonts/RefrigiratorDeluxe/Refrigerator Deluxe Bold.otf') format('opentype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Refrigirator';
+    src: url('../fonts/RefrigiratorDeluxe/Refrigerator Deluxe Heavy.otf') format('opentype');
+    font-weight: 700;
+}
+
+:root {
+    --background: #191A26;
+    --background-100: #191A26;
+    --background-200: #2c2f52;
+    --background-300: #36428c;
+    --foreground: #FFFFFF;
+    --foreground-100: #FFFFFF;
+    --foreground-200: #ccccd3;
+    --foreground-300: #a7a7b0;
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Refrigirator, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+a {
+    color: inherit;
+}
+
+/*
+ * CSS pour la page details.php (complexe, beaucoup de positionnement absolue.
+ *
+ * Je vous donne le droit de l'utiliser, mais j'aimerais que vous l'extrayer dans un fichier .css
+ * isoler afin de respecter les bons standards de programmation.
+ *
+ * Vous ne devriez pas avoir besoin de modifier quoi que se soit pour obtenir la page désiré.
+ */
+.details {
+    position: relative;
+    height: 100vh;
+}
+
+img.details-background, img.hero-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    z-index: -100;
+}
+
+img.hero-background {
+    z-index: -50;
+}
+
+.more-heroes {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    height: 50px;
+    animation-name: up-and-down;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.more-heroes img {
+    height: 100%;
+}
+
+.hero-info {
+    position: absolute;
+    top: 30%;
+    left: 250px;
+    transform: translateY(-50%);
+}
+
+.hero-info * {
+    color: var(--background);
+}
+
+.hero-info img.hero-icon {
+    position: absolute;
+    left: -84px;
+    top: -34px;
+    height: 140px;
+}
+
+.hero-info .class {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding-left: 12px;
+}
+
+.hero-info .class img {
+    height: 26px;
+}
+
+.hero-info .class h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.hero-info h1 {
+    font-size: 88px;
+    max-width: 400px;
+    line-height: 80px;
+    font-style: italic;
+}
+
+.hero-info .bio h5 {
+    border-bottom: 1px solid var(--background);
+}
+
+.hero-info .bio p {
+    max-width: 400px;
+    font-size: 14px;
+}
+
+.hero-full-portrait {
+    position: absolute;
+    left: 250px;
+    height: 850px;
+}
+
+@media (max-width: 1000px) {
+    .hero-info {
+        font-size: 64px;
+        left: 150px;
+    }
+
+    .hero-info h1 {
+        max-width: 300px;
+    }
+
+    .hero-full-portrait {
+        left: 150px;
+        top: 100px;
+        height: 800px;
+    }
+
+    .hero-info p {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 820px) {
+    .hero-info {
+        left: 100px;
+        top: 240px;
+    }
+
+    .hero-info img.hero-icon {
+        left: -54px;
+        top: -24px;
+        height: 88px;
+    }
+
+    .hero-info .class {
+        gap: 0;
+        padding-left: 8px;
+    }
+
+    .hero-info .class img {
+        height: 20px;
+    }
+
+    .hero-info .class h3 {
+        font-size: 20px;
+        padding-left: 8px;
+    }
+
+    .hero-info h1 {
+        font-size: 48px;
+        line-height: 48px;
+        max-width: 200px;
+    }
+
+    .hero-info .bio p {
+        max-width: 300px;
+    }
+
+    .hero-full-portrait {
+        left: -140px;
+        top: 320px;
+        height: 550px;
+    }
+}
+
+@keyframes up-and-down {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}

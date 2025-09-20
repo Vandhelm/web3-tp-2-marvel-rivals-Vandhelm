@@ -1,0 +1,58 @@
+{
+    "adam-warlock": {
+        "name": "Adam Warlock",
+        "class": "strategist"
+    },
+    "angela": {
+        "name": "Angela",
+        "class": "vanguard"
+    },
+    "black-panther": {
+        "name": "Black Panther",
+        "class": "duelist"
+    },
+    "black-widow": {
+        "name": "Black Widow",
+        "class": "duelist"
+    },
+    "blade": {
+        "name": "Black Widow",
+        "class": "duelist"
+    },
+    "captain-america": {
+        "name": "Captain America",
+        "class": "vanguard"
+    },
+    "cloak-and-dagger": {
+        "name": "Cloak and Dagger",
+        "class": "strategist"
+    },
+    "dr-strange": {
+        "name": "Dr. Strange",
+        "class": "vanguard"
+    },
+    "emma-frost": {
+        "name": "Emma Frost",
+        "class": "vanguard"
+    },
+    "groot": {
+        "name": "Groot",
+        "class": "vanguard"
+    },
+    "hawkeye": {
+        "name": "Hawkeye",
+        "class": "duelist"
+    },
+    "hella": {
+        "name": "Hella",
+        "class": "duelist"
+    },
+    "hulk": {
+        "name": "Hulk",
+        "class": "vanguard"
+    },
+    "human-torch": {
+        "name": "Human Torch",
+        "class": "duelist"
+    }
+}
