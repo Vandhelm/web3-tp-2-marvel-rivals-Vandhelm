@@ -5,17 +5,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./public/images/favicon.ico" type="image/x-icon">
+    <!-- https://www.php.net/manual/en/function.include.php -->
+    <!-- include __DIR__ . -->
+    <?php include './public/includes/head.php'; ?>
     <title>Marvel Rivals - Heroes</title>
-
-    <script defer src=".public/bootstrap/js/boostrap.js"></script>    
-    
-    <link rel="stylesheet" href="./public/bootstrap/css/bootstrap.css"> 
-
-    <link rel="stylesheet" href="./public/stylesheets/styles.css">
 </head>
+
 <body>
     <main class="container">
         <section class="text-center py-5">
