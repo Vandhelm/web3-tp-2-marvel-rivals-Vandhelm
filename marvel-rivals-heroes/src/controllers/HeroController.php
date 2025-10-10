@@ -6,9 +6,9 @@
         $role = $_GET['role'] ?? 'all';
 
         $heroes = getAllHeroes();
-        #$filtered = filterHeroes($heroes, $hero_name, $role);
+        $filtered = filterHeroes($heroes, $hero_name, $role);
 
-        print_r($heroes);
+        print_r($filtered);
         # TODO: ajouter la liste des heros
     }
 ?>
