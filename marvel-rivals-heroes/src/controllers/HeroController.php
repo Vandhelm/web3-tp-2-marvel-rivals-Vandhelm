@@ -8,7 +8,7 @@
         $heroes = getAllHeroes();
         $filtered = filterHeroes($heroes, $hero_name, $role);
 
-        print_r($filtered);
         # TODO: ajouter la liste des heros
+        require __DIR__ . '/../views/hero-list.php';
     }
 ?>
