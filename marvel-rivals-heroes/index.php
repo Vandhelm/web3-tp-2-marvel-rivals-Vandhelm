@@ -34,7 +34,6 @@
             ATTENTION: Toute la logique des filtres doit fonctionner sans aucun JavaScript! Tout doit être fait côté serveur en PHP.
         -->
 
-
         <section>
             <h3>Filtres</h3>
             <?php include __DIR__ . '/src/views/components/search-form.php' ; ?>
@@ -51,6 +50,9 @@
 <!--                                                https://developer.mozilla.org/en-US/docs/Glossary/MVC (théorie)                     
                                                     https://dyma.fr/blog/introduction-au-mvc-avec-php/#:~:text=L'architecture%20MVC%20(Model%2D,une%20structure%20efficace%20et%20organis%C3%A9e. (théorie +) 
                                                     https://www.sitepoint.com/the-mvc-pattern-and-php-1/ (théorie ++) -->
+<!--    En PHP MVC, les saisies utilisateur sont généralement gérées par le contrôleur. 
+        Ce dernier reçoit les saisies utilisateur, les valide, puis les transmet au modèle pour traitement. 
+        Le modèle met ensuite à jour les données et notifie le contrôleur, qui met à jour la vue. -->
 
 <!-- 
 Model       :   gère données et logique métier (traitement)
