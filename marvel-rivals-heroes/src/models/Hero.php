@@ -1,18 +1,22 @@
 <?php 
-
+require_once __DIR__ . '/../Utils/hero-image-utils.php';
 require_once __DIR__ . '/../Utils/file-utils.php';
 
-function getAllHeroes(): array {
+function loadHeroes(): array {
     $path = checkFile('data/heroes.json');
 
     $json = file_get_contents($path);
-    $data = json_decode($json, true); 
+    $heroes = json_decode($json, true); 
 
     // TODO : rassembler les validations communes
-    if (!is_array($data)) { 
+    if (!is_array($heroes)) { 
         die("Error : the contents of file heroes.json are invalid.");
     }
-    return $data;
+
+    foreach ($heroes as &$hero) {
+        $hero['images'] = buildHeroImagePaths($hero['name']);
+    }
+    return $heroes;
 }
 
 function filterHeroes(array $heroes, string $name, string $role): array {

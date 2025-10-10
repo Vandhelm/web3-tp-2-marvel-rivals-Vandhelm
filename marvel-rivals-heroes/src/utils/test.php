@@ -1,0 +1,1 @@
+<img src="/public/images/heroes/hella/portrait.png" alt="#">
