@@ -41,6 +41,10 @@
 
         <section>
             <h3>Liste des héroes</h3>
+            <?php 
+                require_once __DIR__ . '/src/Controllers/HeroController.php'; // TODO: changer d'endroit ?
+                showHeroes(); 
+            ?>
         </section>
     </main>
 </body>
