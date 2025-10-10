@@ -1,10 +1,6 @@
 <?php
 // TODO: Lire tous les héros à partir du fichier "./data/heroes.json"
 // TODO: Effectuer la logique de filtrage
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,6 +19,8 @@
                 Parmis une grande sélection d'héros, choisissez celui ou celle qui vous représente le plus afin de conquérire le champ de bataille!
             </p>
         </section>
+
+
         <!--
             Pour les filtres, il faudra ajouter un formulaire contenant :
                 1) Un barre de recherche pour pouvoir chercher un hero par son nom
@@ -36,36 +34,10 @@
             ATTENTION: Toute la logique des filtres doit fonctionner sans aucun JavaScript! Tout doit être fait côté serveur en PHP.
         -->
 
-        <form method="GET" action="index.php">
-            <button>Submit</button>
-
-            <input type="text" name="hero_name" id="hero_name" placeholder="Enter hero name"/>
-            <label for="hero_name">Recherche...</label>
-
-            <fieldset>
-                <input type="radio" id="all" name="role" value="all"checked/>
-                <label for="all">Tous</label>
-
-                <input type="radio" id="duelist" name="role" value="duelist"/>
-                <label for="duelist">Duelistes</label>
-
-                <input type="radio" id="strategist" name="role" value="strategist"/>
-                <label for="strategist">Strategistes</label>
-
-                <input type="radio" id="vanguard" name="role" value="vanguard"/>
-                <label for="vanguard">Vanguards</label>
-            </fieldset>
-        </form>
-
-        <?php 
-            $hero_name = $_GET['hero_name'] ?? '' ;
-            $role = $_GET['role'] ?? '' ;
-
-            print_r($_GET);
-        ?>
 
         <section>
             <h3>Filtres</h3>
+            <?php include __DIR__ . '/src/views/components/search-form.php' ; ?>
         </section>
 
         <section>
@@ -75,11 +47,14 @@
 </body>
 </html>
 
-<!-- Architecture MVC (Model-View-Controller) PHP → https://developer.mozilla.org/en-US/docs/Glossary/MVC (théorie), https://www.youtube.com/watch?v=PkL2wRGfE-w (pratique) -->
-<!--                                                https://dyma.fr/blog/introduction-au-mvc-avec-php/#:~:text=L'architecture%20MVC%20(Model%2D,une%20structure%20efficace%20et%20organis%C3%A9e. (théorie ++) -->
+<!-- Architecture MVC (Model-View-Controller) PHP → https://www.youtube.com/watch?v=PkL2wRGfE-w (pratique) -->
+<!--                                                https://developer.mozilla.org/en-US/docs/Glossary/MVC (théorie)                     
+                                                    https://dyma.fr/blog/introduction-au-mvc-avec-php/#:~:text=L'architecture%20MVC%20(Model%2D,une%20structure%20efficace%20et%20organis%C3%A9e. (théorie +) 
+                                                    https://www.sitepoint.com/the-mvc-pattern-and-php-1/ (théorie ++) -->
 
 <!-- 
 Model       :   gère données et logique métier (traitement)
+                https://stackoverflow.com/questions/5863870/how-should-a-model-be-structured-in-mvc
 View        :   gère mise en page et affichage
 Controller  :   achemine commandes vers les pièces du modèle et de la vue (intermédiaire)
 
