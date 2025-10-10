@@ -1,6 +1,10 @@
 <?php
 // TODO: Lire tous les héros à partir du fichier "./data/heroes.json"
 // TODO: Effectuer la logique de filtrage
+
+
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,6 +35,35 @@
                     - Les deux filtres peuvent se combiner (e.g. le nom et la classe).
             ATTENTION: Toute la logique des filtres doit fonctionner sans aucun JavaScript! Tout doit être fait côté serveur en PHP.
         -->
+
+        <form method="GET" action="index.php">
+            <button>Submit</button>
+
+            <input type="text" name="hero_name" id="hero_name" placeholder="Enter hero name"/>
+            <label for="hero_name">Recherche...</label>
+
+            <fieldset>
+                <input type="radio" id="all" name="role" value="all"checked/>
+                <label for="all">Tous</label>
+
+                <input type="radio" id="duelist" name="role" value="duelist"/>
+                <label for="duelist">Duelistes</label>
+
+                <input type="radio" id="strategist" name="role" value="strategist"/>
+                <label for="strategist">Strategistes</label>
+
+                <input type="radio" id="vanguard" name="role" value="vanguard"/>
+                <label for="vanguard">Vanguards</label>
+            </fieldset>
+        </form>
+
+        <?php 
+            $hero_name = $_GET['hero_name'] ?? '' ;
+            $role = $_GET['role'] ?? '' ;
+
+            print_r($_GET);
+        ?>
+
         <section>
             <h3>Filtres</h3>
         </section>

@@ -5,6 +5,8 @@
 // TODO: Call mon API (chercher sur internet comment faire (utilisation de "curl()") afin d'obtenir la bio du héro
 
 $url = "https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock";
+
+	
 ?>
 
 <!DOCTYPE html>
