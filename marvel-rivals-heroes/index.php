@@ -41,3 +41,16 @@
     </main>
 </body>
 </html>
+
+<!-- Architecture MVC (Model-View-Controller) PHP → https://developer.mozilla.org/en-US/docs/Glossary/MVC (théorie), https://www.youtube.com/watch?v=PkL2wRGfE-w (pratique) -->
+<!--                                                https://dyma.fr/blog/introduction-au-mvc-avec-php/#:~:text=L'architecture%20MVC%20(Model%2D,une%20structure%20efficace%20et%20organis%C3%A9e. (théorie ++) -->
+
+<!-- 
+Model       :   gère données et logique métier (traitement)
+View        :   gère mise en page et affichage
+Controller  :   achemine commandes vers les pièces du modèle et de la vue (intermédiaire)
+
+
+
+
+-->

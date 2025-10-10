@@ -6,6 +6,7 @@
 
 $url = "https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock";
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
