@@ -1,7 +1,6 @@
 <?php
     function buildHeroImagePaths(string $hero_name): array {
-        $folder_name = strtolower(str_replace(' ', '-', $hero_name));   // Dr. Strange → dr.-strange
-        $folder_name = str_replace('.', '', $folder_name);              // dr.-strange → dr-strange
+        $folder_name = format($hero_name);           
 
         $base_path = '/public/images/heroes/' . $folder_name . '/';
 
@@ -13,5 +12,12 @@
         }
         
         return $images;
+    }
+
+    function format(string $name): string {
+        $formatted = strtolower(str_replace(' ', '-', $name));   // Dr. Strange → dr.-strange
+        $formatted = str_replace('.', '', $formatted);          // dr.-strange → dr-strange
+
+        return $formatted;
     }
 ?>
