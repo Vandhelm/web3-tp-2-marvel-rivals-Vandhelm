@@ -1,6 +1,6 @@
 <?php 
-require_once __DIR__ . '/../Utils/hero-image-utils.php';
-require_once __DIR__ . '/../Utils/file-utils.php';
+require_once __DIR__ . '/../utils/hero-image-utils.php';
+require_once __DIR__ . '/../utils/file-utils.php';
 
 function loadHeroes(): array {
     $path = checkFile('data/heroes.json');

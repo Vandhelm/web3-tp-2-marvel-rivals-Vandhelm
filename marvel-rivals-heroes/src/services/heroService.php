@@ -1,14 +1,13 @@
 <?php 
-    require_once __DIR__ . '/../Models/hero.php';
+    require_once __DIR__ . '/../models/hero.php';
 
-    function showHeroes() {
+    function getFilteredHeroes(): array {
         $hero_name = $_GET['hero_name'] ?? '';
         $role = $_GET['role'] ?? 'all';
 
         $heroes = loadHeroes();
         $filtered = filterHeroes($heroes, $hero_name, $role);
 
-        # TODO: ajouter la liste des heros
-        require __DIR__ . '/../views/hero-list.php';
+        return $filtered;
     }
 ?>
