@@ -32,10 +32,11 @@ $url = "https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock";
         <div class="hero-info">
             <img src="public/images/heroes/adam-warlock/icon.png" alt="icône de classe" class="hero-icon" />
             <div class="class">
-                <img src="public/images/ui/strategist-icon.png" alt="icône de classe" />
+                <img src="<?= getRoleIcon($hero['class'])?>" alt="icône de classe">
+                <!-- <img src="public/images/ui/strategist-icon.png" alt="icône de classe" /> -->
                 <h3>Strategist</h3>
             </div>
-            <h1>Adam Warlock</h1>
+            <h1><?= htmlspecialchars($hero['name']) ?></h1>
             <div class="bio">
                 <h5>Biographie</h5>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius est magna, id vehicula libero interdum vitae. Cras ut mi elit. Nulla leo diam, ultricies eu convallis quis, ultricies quis metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>

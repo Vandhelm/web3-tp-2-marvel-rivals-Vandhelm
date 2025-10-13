@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . '/../utils/hero-image-utils.php';
+require_once __DIR__ . '/../utils/hero-utils.php';
 require_once __DIR__ . '/../utils/file-utils.php';
 
 function loadHeroes(): array {

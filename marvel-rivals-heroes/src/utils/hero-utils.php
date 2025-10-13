@@ -20,4 +20,14 @@
 
         return $formatted;
     }
+
+    function getRoleIcon(string $role): string {
+        $icons = [
+            'strategist' => 'public/images/ui/strategist-icon.png',
+            'duelist' => 'public/images/ui/duelist-icon.png',
+            'vanguard' => 'public/images/ui/vanguard-icon.png',
+        ];
+
+        return $icons[$role];
+    }
 ?>

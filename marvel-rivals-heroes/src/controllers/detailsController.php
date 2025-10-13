@@ -1,17 +1,16 @@
 <?php
-    #require_once __DIR__ '/../models/hero.php';
+    require_once __DIR__ . '/../models/hero.php';
 
-    // $name = $_GET['hero'] ?? '';
-    // $heroes = loadHeroes();
+    $name = $_GET['hero'] ?? '';
+    $heroes = loadHeroes();
 
-    // if (!isset($heroes[$name])) {
-    //     header('Location: index.php?page=error');
-    // }
+    if (!isset($heroes[$name])) {
+        header('Location: index.php?page=error');
+    }
 
-    // $hero = $heroes[$name];
-    #$title = "Marvel Rivals - " . $hero['name'];
+    $hero = $heroes[$name];
+    $title = "Marvel Rivals - " . $hero['name'];
 
-    $title = "Marvel Rivals - " . "nome du héro";
     
     $content = __DIR__ . '/../views/pages/details.php';
     require_once __DIR__ . '/../views/layouts/layout.php';
