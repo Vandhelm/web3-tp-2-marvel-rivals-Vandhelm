@@ -1,6 +1,7 @@
 <?php 
 require_once __DIR__ . '/../utils/hero-utils.php';
 require_once __DIR__ . '/../utils/file-utils.php';
+require_once __DIR__ . '/../services/MarvelRivalApiService.php';
 
 function loadHeroes(): array {
     $path = checkFile('data/heroes.json');
@@ -15,6 +16,7 @@ function loadHeroes(): array {
 
     foreach ($heroes as &$hero) {
         $hero['images'] = buildHeroImagePaths($hero['name']);
+        $hero['bio'] = fetchHeroBio(format($hero['name']));
     }
     return $heroes;
 }

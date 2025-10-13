@@ -43,7 +43,7 @@ $url = "https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock";
 
             <div class="bio">
                 <h5>Biographie</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius est magna, id vehicula libero interdum vitae. Cras ut mi elit. Nulla leo diam, ultricies eu convallis quis, ultricies quis metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <p><?= htmlspecialchars($hero['bio']) ?></p>
             </div>
         </div>
     </section>
