@@ -6,5 +6,6 @@
 <link rel="stylesheet" href="/public/stylesheets/styles.css">
 
 <link rel="stylesheet" href="/public/stylesheets/details.css">
+<link rel="stylesheet" href="/public/stylesheets/home.css">
 
 <script defer src="/public/bootstrap/js/boostrap.js"></script>  
