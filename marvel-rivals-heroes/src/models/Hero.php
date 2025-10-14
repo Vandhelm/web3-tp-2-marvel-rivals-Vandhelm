@@ -16,7 +16,7 @@ function loadHeroes(): array {
 
     foreach ($heroes as &$hero) {
         $hero['images'] = buildHeroImagePaths($hero['name']);
-        $hero['bio'] = fetchHeroBio(format($hero['name']));
+        $hero['bio'] = fetchHeroBio(format($hero['name']));   // 1 info stable pour petit nb de données (héros) → pas la peine de le faire quand on clique
     }
     return $heroes;
 }

@@ -21,6 +21,19 @@
         return $formatted;
     }
 
+    function unformat(string $formatted): string {
+        $name = strtolower(str_replace('-', ' ', $formatted));   // dr-strange → dr strange
+        $name = ucwords($name);                                  // dr strange → Dr Strange
+
+        $abbreviations = ['Dr', 'Mr', 'Mrs', 'Ms'];
+
+        foreach ($abbreviations as $abbr) {
+            $name = preg_replace("/\b$abbr\b/i", "$abbr.", $name); // Dr Strange → Dr. Strange
+        }
+
+        return $name;
+    }
+
     function getRoleIcon(string $role): string {
         $icons = [
             'strategist' => 'public/images/ui/strategist-icon.png',

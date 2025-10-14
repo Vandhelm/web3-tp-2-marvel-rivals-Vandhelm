@@ -10,4 +10,15 @@
 
         return $filtered;
     }
+
+    function getHero(string $name): ?array {
+        $heroes = loadHeroes(); 
+        foreach ($heroes as $hero) {
+            if (strcasecmp($hero['name'], $name) === 0) {
+                return $hero;
+            }
+        }
+    return null;
+}
+
 ?>
