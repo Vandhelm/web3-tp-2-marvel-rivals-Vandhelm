@@ -35,10 +35,11 @@
     }
 
     function getRoleIcon(string $role): string {
+        $base_path = "public/images/ui/icons/classes/";
         $icons = [
-            'strategist' => 'public/images/ui/strategist-icon.png',
-            'duelist' => 'public/images/ui/duelist-icon.png',
-            'vanguard' => 'public/images/ui/vanguard-icon.png',
+            'strategist' => $base_path . 'strategist-icon.png',
+            'duelist' => $base_path . 'duelist-icon.png',
+            'vanguard' => $base_path . 'vanguard-icon.png',
         ];
 
         return $icons[$role];

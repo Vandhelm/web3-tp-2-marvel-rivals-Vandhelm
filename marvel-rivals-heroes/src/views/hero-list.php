@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="row">
+  <div class="row g-3">
 
     <?php if (empty($heroes)): ?>
         <p>Aucun héros trouvé.</p>

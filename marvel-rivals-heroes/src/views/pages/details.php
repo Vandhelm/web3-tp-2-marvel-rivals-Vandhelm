@@ -24,7 +24,7 @@ $url = "https://hub-sorel-tracy.mathiscote.ca/api/marvel-rivals/adam-warlock";
 <main>
     <section class="details overflow-x-hidden">
         <img class="hero-background" src="<?= htmlspecialchars($hero['images']['background']) ?>" alt="Background du hero" />
-        <img class="details-background" src="public/images/ui/details-background.png" alt="Background du details" />
+        <img class="details-background" src="public/images/ui/backgrounds/details-background.png" alt="Background du details" />
         <img class="hero-full-portrait" src="<?= htmlspecialchars($hero['images']['full-portrait']) ?>" alt="portrait complet du hero" />
 
         <a href="index.php" class="more-heroes">

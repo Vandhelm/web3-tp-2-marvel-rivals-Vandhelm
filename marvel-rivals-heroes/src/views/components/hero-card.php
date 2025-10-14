@@ -4,8 +4,9 @@
         - mobile 
 -->
 
-<div class="col col-2">
+<div class="col">
     <a href="index.php?page=details&hero=<?= format($hero['name'])?>"> 
-        <img src="<?= htmlspecialchars($hero['images']['portrait']) ?>" alt="<?= htmlspecialchars($hero['name']) ?>">
+        <img src="<?= htmlspecialchars($hero['images']['portrait']) ?>" alt="<?= htmlspecialchars($hero['name']) ?>"
+        style="height: 100%; object-fit: cover;">
     </a>
 </div>

@@ -1,0 +1,51 @@
+.hero-info {
+    position: absolute;
+    top: 30%;
+    left: 250px;
+    transform: translateY(-50%);
+}
+
+.hero-info * {
+    color: var(--background);
+}
+
+.hero-info img.hero-icon {
+    position: absolute;
+    left: -84px;
+    top: -34px;
+    height: 140px;
+}
+
+.hero-info .class {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    padding-left: 12px;
+}
+
+.hero-info .class img {
+    height: 26px;
+}
+
+.hero-info .class h3 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.hero-info h1 {
+    font-size: 88px;
+    max-width: 400px;
+    line-height: 80px;
+    font-style: italic;
+}
+
+.hero-info .bio h5 {
+    border-bottom: 1px solid var(--background);
+}
+
+.hero-info .bio p {
+    max-width: 400px;
+    font-size: 14px;
+}

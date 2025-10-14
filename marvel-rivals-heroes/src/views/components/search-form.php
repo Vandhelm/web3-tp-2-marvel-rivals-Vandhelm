@@ -1,4 +1,5 @@
 <form method="GET" action="index.php">
+    
     <button>Submit</button>
 
     <input type="text" name="hero_name" id="hero_name" placeholder="Enter hero name"/>
