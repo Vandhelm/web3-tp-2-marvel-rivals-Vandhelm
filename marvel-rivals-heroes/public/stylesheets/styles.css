@@ -1,7 +1,3 @@
-/**
-    Style CSS très rapide pour vous donner les fonts, les images et un début de page. 
-    NOTE: Le CSS n'est pas très bien fait.
- */
 @font-face {
     font-family: 'Nunito';
     src: url('../fonts/Nunito/Nunito-Regular.ttf') format('truetype');
@@ -59,14 +55,13 @@ a {
     color: inherit;
 }
 
-/*
- * CSS pour la page details.php (complexe, beaucoup de positionnement absolue.
- *
- * Je vous donne le droit de l'utiliser, mais j'aimerais que vous l'extrayer dans un fichier .css
- * isoler afin de respecter les bons standards de programmation.
- *
- * Vous ne devriez pas avoir besoin de modifier quoi que se soit pour obtenir la page désiré.
- */
+form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  font-family: Nunito, sans-serif;
+}
 
 
 
