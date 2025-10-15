@@ -9,12 +9,13 @@ function loadHeroes(): array {
     $json = file_get_contents($path);
     $heroes = json_decode($json, true); 
 
-    // TODO : rassembler les validations communes
     if (!is_array($heroes)) { 
         die("Error : the contents of file heroes.json are invalid.");
     }
 
-    foreach ($heroes as &$hero) {
+    // https://www.php.net/manual/fr/language.references.whatdo.php#language.references.whatdo.assign (Exemple #3 Références et structure foreach)
+    // '&' agit comme un pointeur (en C) → crée une ref vers l'élément du tableau (pour que la modif "reste")
+    foreach ($heroes as &$hero) { 
         $hero['images'] = buildHeroImagePaths($hero['name']);
         $hero['bio'] = fetchHeroBio(format($hero['name']));   // 1 info stable pour petit nb de données (héros) → pas la peine de le faire quand on clique
     }
@@ -49,5 +50,4 @@ function filterByRole(array $heroes, string $role): array {
 
     return $filtered;
 }
-
 ?>

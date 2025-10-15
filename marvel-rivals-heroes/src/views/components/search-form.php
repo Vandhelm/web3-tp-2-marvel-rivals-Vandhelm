@@ -1,4 +1,3 @@
-
 <form method="GET" action="index.php" class="d-flex align-items-center bg-transparent py-3">
     
     <div class="search-bar">
@@ -7,12 +6,9 @@
         </button>
 
         <input type="text" name="hero_name" id="hero_name" placeholder="Recherche..."/>
-
     </div>
     
-    
     <fieldset class="role-filter">
-        
         <input type="radio" id="all" name="role" value="all"checked/>
         <label for="all">Tous</label> 
 
@@ -33,6 +29,5 @@
             <img src="public/images/ui/icons/classes/vanguard-icon.png" alt="icône de classe">
             <span>Vanguards</span>
         </label>
-
     </fieldset>
 </form>

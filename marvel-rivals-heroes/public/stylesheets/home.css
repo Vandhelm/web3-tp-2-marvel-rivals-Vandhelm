@@ -2,3 +2,11 @@
 @import url("home/role-filter.css");
 @import url("home/responsive.css");
 @import url("home/hero-card.css");
+
+main {
+  background: url("../images/ui/backgrounds/hero-select-background.png") no-repeat center center fixed;
+  background-size: cover; 
+  background-position: center top 10vh;
+
+  background-color: var(--background); 
+}

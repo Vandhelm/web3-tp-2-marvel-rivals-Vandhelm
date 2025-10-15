@@ -28,6 +28,10 @@
         $abbreviations = ['Dr', 'Mr', 'Mrs', 'Ms'];
 
         foreach ($abbreviations as $abbr) {
+            // https://www.w3schools.com/php/func_regex_preg_replace.asp
+            // preg_replace : remplace un mot dans la chaîne par l'occurence trouvée 
+            // \b : garantit que abbr est un mot complet (et pas une sous-chaine)
+            // i : insensible au min/ maj
             $name = preg_replace("/\b$abbr\b/i", "$abbr.", $name); // Dr Strange → Dr. Strange
         }
 
