@@ -1,7 +1,7 @@
-<main>
+<main class="details">
     <section class="details overflow-x-hidden">
-        <img class="hero-background" src="<?= htmlspecialchars($hero['images']['background']) ?>" alt="background du hero" />
-        <img class="details-background" src="public/images/ui/backgrounds/details-background.png" alt="background du details" />
+        <img class="hero-background" src="<?= htmlspecialchars($hero['images']['background']) ?>" alt="Background du hero" />
+        <img class="details-background" src="public/images/ui/backgrounds/details-background.png" alt="Background du details" />
         <img class="hero-full-portrait" src="<?= htmlspecialchars($hero['images']['full-portrait']) ?>" alt="portrait complet du hero" />
 
         <a href="index.php" class="more-heroes">

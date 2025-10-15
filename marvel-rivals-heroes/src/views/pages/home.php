@@ -1,4 +1,4 @@
-<main class="container">
+<main class="home container">
     <section class="text-center py-5">
         <h1 class="main-title">Choisissez votre héro</h1>
         <p>Parmis une grande sélection d'héros, choisissez celui ou celle qui vous représente le plus afin de conquérire le champ de bataille!</p>
